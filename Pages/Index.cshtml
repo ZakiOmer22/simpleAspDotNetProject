@@ -1,0 +1,80 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Registration Form";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mustafe Abdiasiis - Registration Form</title>
+    <style>
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form method="post">
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="FullName" class="form-label">Full Name</label>
+                <input type="text" id="FullName" name="FullName" class="form-input" />
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" id="Email" name="Email" class="form-input" />
+            </div>
+
+            <!-- Gender Radio Buttons -->
+            <div class="form-group">
+                <label class="form-label">Gender</label>
+                <input type="radio" id="Male" name="Gender" value="Male" />
+                <label for="Male">Male</label>
+                <input type="radio" id="Female" name="Gender" value="Female" />
+                <label for="Female">Female</label>
+            </div>
+
+            <!-- City Dropdown -->
+            <div class="form-group">
+                <label for="City" class="form-label">City</label>
+                <select id="City" name="City" class="form-input">
+                    <option value="">Select City</option>
+                    <option value="Hargeisa">Hargeisa</option>
+                    <option value="Berbera">Berbera</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="form-input">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
